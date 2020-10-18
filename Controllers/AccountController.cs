@@ -22,12 +22,12 @@ namespace vocabadmin.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.API_SERVER = _AppSettings.API_SERVER;
             return View();
         }
 
         public IActionResult Login(AuthenticateRequest authenticateRequest)
-        {
-            HttpContext.Response.Headers.Add("", "");
+        {            
             return View();
         }
     }
