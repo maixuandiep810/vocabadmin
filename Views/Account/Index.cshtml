@@ -14,22 +14,21 @@
                 Login
             </div>
             <div class="card-body">
-                    @using (Html.BeginForm())
-                    {
-                    @Html.AntiForgeryToken()
+                <form method="POST" id="loginForm">                 
                     <div class="form-group">
                         @Html.LabelFor(m => m.Username)
                         @Html.TextBoxFor(m => m.Username, "", new { @class = "form-control", @placeholder = "Username" })
-
                     </div>
+
                     <div class="form-group">
                         @Html.LabelFor(m => m.Password)
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
                     </div>
+
                     <div class="form-group">
-                        <button id="btnSubmit" class="btn btn-primary">Login</button>
+                        <input id="btnSubmit" type="submit" name="submit" class="btn btn-danger" value="LOGIN"/>
                     </div>
-                }
+                </form>
             </div>
         </div>
     </div>
@@ -37,28 +36,58 @@
 
 
 @section Scripts {
+
     @{Html.RenderPartial("_ValidationScriptsPartial");}
 
     <script>
-         $(document).ready(function () 
-         {
-            $('#btnSubmit').on('click', function () {
-                login();
-            });
-            
-        });
-            function login() {
-            $.ajax({
-                url: "https://localhost:5000/api/user/autenticate",
-                type: "POST",
-                dataType: "json",
-                success: function (result) {
-                    var mess = result["message"];
-                    alert(mess);
-                },
-                error: function (errormessage) {
-                    alert(errormessage.responseText);
+        $(document).ready(function () 
+        {
+            $("#btnSubmit").click(function (event) {
+                //stop submit the form, we will post it manually.
+                event.preventDefault();
+                // Get form
+                var loginForm = $('#loginForm')[0];
+
+                // Create an FormData object
+                var dataLoginForm = new FormData(loginForm);
+                var jsonLoginForm = {
+                    "username" : dataLoginForm.get("Username").toString(),
+                    "password" : dataLoginForm.get("Password").toString()
                 }
-            }
+                jsonLoginForm = JSON.stringify(jsonLoginForm);
+
+
+                // disabled the submit button
+                $("#btnSubmit").prop("disabled", true);
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:5000/api/user/authenticate",
+                    contentType: "application/json",
+                    dataType: 'json',
+                    data: jsonLoginForm,
+                    processData: false,
+                    cache: false,
+                    timeout: 600000,
+                    success: function (data) {
+                        console.log("SUCCESS : ", data);
+                        $("#btnSubmit").prop("disabled", false);
+
+                    },
+                    error: function (e) {
+                        console.log("ERROR : ", e);
+                        $("#btnSubmit").prop("disabled", false);
+
+                    }
+                });
+            });
+
+        });
+
+
+
+ 
     </script>
 }
+
+

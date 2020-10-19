@@ -1,0 +1,24 @@
+           $('#btnSubmit').on('click', function () {
+                login();
+            });
+            
+        });
+            function login() {
+            $.ajax
+                (
+                    {
+                        url: "https://localhost:5000/api/user/autenticate",
+                        type: "POST",
+                        dataType: "json",
+                        success: function (result) 
+                            {
+                                var mess = result["message"];
+                                alert(mess);
+                            },
+                        error: function (errormessage) 
+                            {
+                                alert(errormessage.responseText);
+                            }
+                    }
+                )
+            }

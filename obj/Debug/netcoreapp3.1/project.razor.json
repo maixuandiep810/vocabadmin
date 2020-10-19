@@ -14392,6 +14392,11 @@
   "RootNamespace": "vocabadmin",
   "Documents": [
     {
+      "FilePath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/Views/Shared/_Header.cshtml",
+      "TargetPath": "Views\\Shared\\_Header.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,11 @@
     {
       "FilePath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/Views/Shared/_Footer.cshtml",
+      "TargetPath": "Views\\Shared\\_Footer.cshtml",
       "FileKind": "mvc"
     },
     {
