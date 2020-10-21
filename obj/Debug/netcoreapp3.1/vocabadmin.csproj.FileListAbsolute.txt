@@ -225,3 +225,4 @@
 /home/p/Documents/Code/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Header.cshtml.g.cs
 /Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Footer.cshtml.g.cs
 /Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Header.cshtml.g.cs
+/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_HeaderAdmin.cshtml.g.cs

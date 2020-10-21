@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/Views/Shared/_HeaderAdmin.cshtml",
+      "TargetPath": "Views\\Shared\\_HeaderAdmin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

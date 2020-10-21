@@ -3,8 +3,15 @@
 
 @{
     ViewBag.Title = "Login";
-    string API_SERVER = (ViewBag.API_SERVER) as string;
-    string LOGIN_URL = API_SERVER + "/api/user/autenticate";
+    @* string API_SERVER = (ViewBag.API_SERVER) as string;
+    string LOGIN_URL = API_SERVER + "/api/user/autenticate"; *@
+}
+
+
+@section Header {
+
+    @{Html.RenderPartial("_Header");}
+    
 }
 
 <div class="row justify-content-md-center">
