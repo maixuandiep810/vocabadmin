@@ -67,6 +67,11 @@
                 // disabled the submit button
                 $("#btnSubmit").prop("disabled", true);
 
+                        var url = "https://localhost:5005/admin";
+                        $(location).attr('href',url)
+
+
+                /*
                 $.ajax({
                     type: "POST",
                     url: "http://localhost:5000/api/user/authenticate",
@@ -78,8 +83,11 @@
                     timeout: 600000,
                     success: function (data) {
                         console.log("SUCCESS : ", data);
+                        if (data.data.token != null) {
+                            var url = "https://localhost:5005/admin";
+                            $(location).attr('href',url);
+                        }
                         $("#btnSubmit").prop("disabled", false);
-
                     },
                     error: function (e) {
                         console.log("ERROR : ", e);
@@ -87,6 +95,9 @@
 
                     }
                 });
+                */
+
+
             });
 
         });

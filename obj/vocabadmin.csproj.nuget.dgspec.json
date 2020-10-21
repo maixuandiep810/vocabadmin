@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/vocabadmin.csproj": {}
+    "/home/p/Documents/Code/vocabadmin/vocabadmin.csproj": {}
   },
   "projects": {
-    "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/vocabadmin.csproj": {
+    "/home/p/Documents/Code/vocabadmin/vocabadmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/vocabadmin.csproj",
+        "projectUniqueName": "/home/p/Documents/Code/vocabadmin/vocabadmin.csproj",
         "projectName": "vocabadmin",
-        "projectPath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/vocabadmin.csproj",
-        "packagesPath": "/Users/rocky/.nuget/packages/",
-        "outputPath": "/Users/rocky/Documents/Rocky1409_Documents/Codes/Dotnet/vocabadmin/obj/",
+        "projectPath": "/home/p/Documents/Code/vocabadmin/vocabadmin.csproj",
+        "packagesPath": "/home/p/.nuget/packages/",
+        "outputPath": "/home/p/Documents/Code/vocabadmin/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/rocky/.nuget/NuGet/NuGet.Config"
+          "/home/p/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -62,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
         }
       }
     }

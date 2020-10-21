@@ -1,0 +1,73 @@
+@model vocabadmin.Models.Vocabulary
+@{
+    ViewBag.Title = "Admin";
+
+}
+
+
+@section Header {
+
+    @{Html.RenderPartial("_HeaderAdmin");}
+    
+}
+
+<div class="row">
+    <div class="col-12">
+        <div id="data_area">
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    @{Html.RenderPartial("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () 
+            {
+
+
+                $("#vocabulary_nav").click(function (event) {
+                    event.preventDefault();
+                    var url = "https://localhost:5005/admin/vocabularytable/1";
+                    $("#data_area").load(url);
+                });
+            }
+        );
+    </script>
+}
+
+
+                
+                @* var data_table = $("#data_table tbody");
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:5000/api/vocabulary",
+                    dataType: 'json',
+                    processData: false,
+                    cache: false,
+                    timeout: 600000,
+                    success: function (data) {
+                        if (data != null) {
+                            $.each(data, function (index, value) {
+                                    data_table.append("<tr>");
+                                       data_table.append("<td>");
+                                       data_table.append(data[index]["word"])
+                                       data_table.append("</td>")
+                                        data_table.append("<td>")
+                                       data_table.append(data[index]["word"])
+                                       data_table.append("</td>")
+                                    data_table.append("<td>")
+                                       data_table.append(data[index]["word"])
+                                       data_table.append("</td>")
+                                    data_table.append("</tr>")
+                                }
+                            );
+                        }
+                    },
+                    error: function (data) {
+
+                    }
+                });
+                 *@
