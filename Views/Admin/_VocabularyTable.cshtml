@@ -1,7 +1,6 @@
 @model vocabadmin.Models.Vocabulary
 
 @{
-    int row = (int)ViewBag.RowNumber;
 }
 
 <table class="table" id="vocab_table">
@@ -9,20 +8,26 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">@Html.DisplayNameFor(m => m.Word)</th>
-            <th scope="col">@Html.DisplayNameFor(m => m.Word)</th>
-            <th scope="col">@Html.DisplayNameFor(m => m.Word)</th>
+            <th scope="col">@Html.DisplayNameFor(m => m.Meaning)</th>
+            <th scope="col">@Html.DisplayNameFor(m => m.Definition)</th>
+            <th scope="col">@Html.DisplayNameFor(m => m.Sentence)</th>
+            <th scope="col">Image</th>
+            <th scope="col">Audio</th>
+            <th scope="col">Action</th>
+
         </tr>
     </thead>
     <tbody>
-        @for(var i = 0; i < row; i++)
-            {
-                string idRow = "vocab_row_" + i.ToString();
-                <tr id="@idRow">
-                    <td scope="col">#</td>
-                    <td scope="col">@Html.DisplayNameFor(m => m.Word)</td>
-                    <td scope="col">@Html.DisplayNameFor(m => m.Word)</td>
-                    <td scope="col">@Html.DisplayNameFor(m => m.Word)</td>
-                </tr>
-            }
+        <tr id="vocab_row_default">
+            <td scope="col" id="col_1"></td>
+            <td scope="col" id="col_2"></td>
+            <td scope="col" id="col_3"></td>
+            <td scope="col" id="col_4"></td>
+            <td scope="col" id="col_5"></td>
+            <td scope="col" id="col_6"></td>
+            <td scope="col" id="col_7"></td>
+            <td scope="col" id="col_8"></td>
+
+        </tr>
     </tbody>
 </table>

@@ -28,10 +28,14 @@ namespace vocabadmin.Controllers
             return View();
         }
 
-        public IActionResult VocabularyTable(int id)
+        public IActionResult VocabularyTable()
         {      
-            ViewBag.RowNumber = id;
             return PartialView("_VocabularyTable");
+        }
+
+        public IActionResult ActionHtml()
+        {      
+            return PartialView("_ActionHtml");
         }
     }
 }

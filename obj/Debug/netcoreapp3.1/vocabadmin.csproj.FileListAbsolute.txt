@@ -229,3 +229,4 @@
 /home/p/Documents/Code/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Index.cshtml.g.cs
 /home/p/Documents/Code/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Admin/_VocabularyTable.cshtml.g.cs
 /home/p/Documents/Code/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_HeaderAdmin.cshtml.g.cs
+/home/p/Documents/Code/vocabadmin/obj/Debug/netcoreapp3.1/Razor/Views/Admin/_ActionHtml.cshtml.g.cs

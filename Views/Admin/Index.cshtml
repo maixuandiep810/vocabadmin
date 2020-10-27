@@ -26,12 +26,51 @@
     <script>
         $(document).ready(function () 
             {
-
-
                 $("#vocabulary_nav").click(function (event) {
                     event.preventDefault();
-                    var url = "https://localhost:5005/admin/vocabularytable/1";
-                    $("#data_area").load(url);
+                    var urlHtml = "https://localhost:5005/admin/vocabularytable";
+                    $("#data_area").load(urlHtml);
+
+                    $.ajax({
+                        type: "GET",
+                        url: "http://localhost:5000/api/vocabulary",
+                        contentType: "application/json",
+                        cache: false,
+                        timeout: 600000,
+                        success: function (data) {
+                            console.log("SUCCESS : ", data);
+                            if (data != null && data.data !=null) {
+                                var listVocab = data.data;
+                                var vocab_table = $("#vocab_table")
+                                if (listVocab != null) {
+                                    $.each(listVocab, function (index, value) {
+                                        var currentRow = $("#vocab_row_default").clone();
+                                        var rowId = "#vocab_row_" + index.toString();
+                                        currentRow.children("#col_2").append(value.word)
+                                        currentRow.children("#col_3").append(value.meaning)
+                                        currentRow.children("#col_4").append(value.definition)
+                                        currentRow.children("#col_5").append(value.sentence)
+                                        currentRow.children("#col_6").append(value.imagr_url)
+                                        currentRow.children("#col_7").append(value.audio_url)
+                                        var urlActionHtml = "https://localhost:5005/admin/actionhtml";
+                                        currentRow.children("#col_8").load(urlActionHtml);
+                                        currentRow.attr("id", rowId);
+                                        vocab_table.children("tbody").append(currentRow);
+                                    });
+
+                                }
+                            }
+                            else {
+                                alert("DATA - NULL");
+                            }
+
+                        },
+                        error: function (e) {
+                            console.log("ERROR : ", e);
+
+
+                        }
+                    });
                 });
             }
         );
